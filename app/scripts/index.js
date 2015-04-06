@@ -111,18 +111,21 @@ var throwBalls = function() {
   // get a random starting point
   var ballX = Math.floor(Math.random() * gymFloor.width());
 
-  var ballSpeed = 300;
-  if(score > 0 && score < 20) {
-    ballSpeed = 300;
+  var ballSpeed;
+  if(score >= 0 && score < 20) {
+    ballSpeed = 3000;
   }
-  else if ( score > 20 && score < 50) {
+  else if ( score >= 20 && score < 50) {
+    ballSpeed = 2000;
+  }
+  else if (score >= 50 && score < 80) {
+    ballSpeed = 1000;
+  }
+  else if ( score >= 80 && score < 100) {
     ballSpeed = 500;
   }
-  else if (score > 50 && score < 80) {
-    ballSpeed = 700;
-  }
-  else if ( score > 80 && score < 100) {
-    ballSpeed = 1000;
+  else if (score >= 100){
+    ballSpeed = 400;
   }
 
 
@@ -136,7 +139,7 @@ var throwBalls = function() {
   // 3rd arg = function to call once animation is complete
   ball.animate({
     top: gymFloor.height(),
-  }, 2000);
+  }, ballSpeed);
 
 
   // interval to test for a collision
