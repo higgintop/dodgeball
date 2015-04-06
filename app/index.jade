@@ -1,0 +1,38 @@
+doctype html
+html(lang='en-US')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title game
+    link(rel='stylesheet', href='css/main.css')
+  body
+      .games-container
+        h1 d o d g e b a l l
+        .dodgeball-high-score-container
+          .scoreBoard
+            img(src="img/score.png")
+          .score
+        .dodgeball-game-container
+          img(src="img/gymFloor.jpg", class="gymFloor")
+          .man
+            img(src="img/man.png")
+        .dodgeball-loser.hidden
+          h1.loser lose!
+          .newScore
+        .dodgeball-winner.hidden
+          h1.winner win!
+          .newScore
+  
+
+
+
+
+      // build:js js/vendor.min.js
+      // bower:js
+      // endbower
+      // endbuild
+
+      // build:js js/main.min.js
+      script(src="/scripts/index.js")
+      // endbuild

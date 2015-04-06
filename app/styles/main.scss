@@ -1,0 +1,154 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+
+@font-face {
+    font-family: dodgeballFont;
+    src: url('/fonts/star_jedi/starjout/Starjout.ttf');
+}
+
+body {
+
+    text-align: center;
+
+    .games-container {
+        background-color: black;
+        margin: 0 auto;
+        width: 1020px;
+        height: 900px;
+
+        h1:first-child {
+            font-family: dodgeballFont;
+            font-size: 72px;
+            color: #E9BE3B;
+        }
+
+        .dodgeball-start-container {
+            border: 1px solid red;
+            margin-right: 100px;
+            padding: 20px;
+        }
+
+        .dodgeball-loser {
+            position: absolute;
+            z-index: 3;
+            top: 360px;
+            left: 470px;
+
+            .loser {
+                color: white;
+                font-size: 12px;
+            }
+
+            .newScore {
+                color: white;
+                font-size: 50px;
+                font-family: dodgeballFont;
+            }
+        }
+
+           .dodgeball-winner {
+            position: absolute;
+            z-index: 3;
+            top: 360px;
+            left: 525px;
+
+            .winner {
+                color: white;
+                font-size: 12px;
+            }
+
+             .newScore {
+                color: white;
+                font-size: 50px;
+                font-family: dodgeballFont;
+            }
+        }
+    }
+}
+
+.dodgeball-high-score-container {
+    margin-left: 20px;
+    font-size: 72px;
+
+    .scoreBoard {
+        margin-top: -20px;
+        margin-left: -150px;
+    }
+
+   .score {
+        h2 {
+            font-size: 50px;
+            font-family: dodgeballFont;
+            color: white;
+            position: absolute;
+            z-index: 3;
+            top: 100px;
+            right: 600px;
+        }
+    }
+   
+}
+
+
+
+.dodgeball-game-container {
+    width: 60vw;
+    height: 70vh;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    vertical-align: 50%;
+    top: 45vh;
+    overflow: hidden;
+    transform: translateY(-50%);
+    background-color: transparent;
+    z-index: 0;
+}
+
+.dodgeball-game-container img {
+    position: absolute;
+    width: 102%;
+    height: 103%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    z-index: -2;
+}
+
+
+.man {
+    width: 50px;
+    height: 80px;
+    bottom: 0em;
+    left: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+.man img {
+    position: absolute;
+    width: 103%;
+    height: 110%;
+    top: 50%;
+    left: 50%;
+}
+
+.ball {
+  top:0px;
+  left:0px;
+  position:absolute;
+  width: 2em;
+  height: 2em;
+  z-index: 2;
+}
+
+.ball img {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    width: 120%;
+    height: 120%;
+    z-index: 2;
+}
